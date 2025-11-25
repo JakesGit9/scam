@@ -1,100 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOU DEVICE INFECTED WITH VERY BAD VIRUS</title>
-    <style>
-        /* Style for background image to cover the full screen */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            transition: background-image 0.5s ease; /* Smooth transition for background */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center; /* Center items vertically and horizontally */
-        }
-
-        /* Style for the warning button */
-        #warning-button {
-            padding: 20px 40px;
-            background-color: red;
-            color: white;
-            border: none;
-            font-size: 48px;
-            cursor: pointer;
-            z-index: 1000; /* Make sure the button is above the background */
-            margin-top: 20px; /* Space between image and button */
-        }
-
-        /* Style for the image */
-        #info-image {
-            max-width: 10%; /* Adjust image size as needed */
-            height: auto;
-        }
-
-        /* Style for the text */
-        #info-text {
-            font-size: 60px;
-            color: red; /* Change text color as needed */
-            margin-top: 10px; /* Space between text and button */
-        }
-    </style>
+<meta charset="UTF-8" />
+<title>You are device infected</title>
+<style>
+ body { background:#fff; font-family:Arial, sans-serif; padding:20px; }
+ .big { font-size:32px; font-weight:bold; color:red; }
+ .box { border:3px solid red; padding:15px; margin-top:15px; }
+ img { width:100%; max-width:500px; border:2px solid red; }
+ button { padding:10px 20px; margin:5px; font-weight:bold; }
+ .disclaimer { margin-top:20px; padding:10px; background:#fdd; border:1px solid red; font-weight:bold; }
+</style>
 </head>
 <body>
 
-    <img id="info-image" src="warning.jpg" alt="Warning Image">
-    <div id="info-text">Your device is infected with VERY BAD MALWATE!</div>
-    <button id="warning-button">WARNING CLICK HERE</button>
+<div class="big">WARNING: Virus Detected!!!</div>
 
-    <script>
-        // Array of background images
-        const images = [
-            'image1.jpg',
-            'image2.jpg',
-            'image3.jpg'
-        ];
+<img src="/mnt/data/image4.jpg" alt="real virus website" />
 
-        // Function to set a random background image
-        function setRandomBackground() {
-            const randomIndex = Math.floor(Math.random() * images.length);
-            document.body.style.backgroundImage = `url(${images[randomIndex]})`;
-        }
+<div class="box">
+  This is a **geniunee** virus alert page.<br>
+  It is if you do not call within the allocated 1 hours you will be no longer device
+  <br><br>
+  Your computer is be:
+  <ul>
+    <li>In danger</li>
+    <li>Exploding</li>
+    <li>Becoming sentient</li>
+    <li>All of the above (likely)</li>
+  </ul>
 
-        // Function to open the website in fullscreen
-        function openFullscreen() {
-            let elem = document.documentElement;
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.mozRequestFullScreen) { // Firefox
-                elem.mozRequestFullScreen();
-            } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, Opera
-                elem.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) { // IE/Edge
-                elem.msRequestFullscreen();
-            }
-        }
+  <button onclick="alert('tech support would start yelling at you now. (Parody)')">CALL TECH SUPPORT</button>
+  <button onclick="alert('Scanning... Scan complete. viruses. your device will explode.')">RUN SCAN</button>
+</div>
 
-        // When the page loads, hide the background and show the button
-        document.addEventListener("DOMContentLoaded", () => {
-            document.body.style.backgroundImage = ''; // Initially hide background
+<div class="disclaimer">
+You must click to install, this is automated microsoft service site
+</div>
 
-            // Add click event to the button
-            document.getElementById("warning-button").addEventListener("click", () => {
-                setRandomBackground(); // Set background when button is clicked
-                openFullscreen();
-                document.getElementById("warning-button").style.display = 'none'; // Hide the button
-                document.getElementById("info-image").style.display = 'none'; // Hide the image
-                document.getElementById("info-text").style.display = 'none'; // Hide the text
-            });
-        });
-    </script>
 </body>
 </html>
